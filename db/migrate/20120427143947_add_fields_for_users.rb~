@@ -1,0 +1,17 @@
+class AddFieldsForUsers < ActiveRecord::Migration
+  def up
+    add_column :users, :start_holiday, :date
+    add_column :users, :end_holiday, :date
+    add_column :users, :officer, :string        
+    add_column :users, :department, :string
+    add_column :users, :photo, :string   
+  end
+
+  def down
+    remove_column :users, :start_holiday
+    remove_column :users, :end_holiday
+    remove_column :users, :officer
+    remove_column :users, :department
+    remove_column :users, :photo  
+  end
+end

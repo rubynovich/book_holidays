@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.3'
-gem 'sqlite3'
+gem 'pg'
+gem 'activeadmin', :git => 'git://github.com/moorecp/active_admin.git'
+gem 'meta_search', '>= 1.1.0.pre'
+gem 'passenger'
+gem 'paperclip'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -13,7 +17,6 @@ gem "rspec-rails", ">= 2.9.0.rc2", :group => [:development, :test]
 gem "machinist", :group => :test
 gem "factory_girl_rails", ">= 3.2.0", :group => [:development, :test]
 gem "email_spec", ">= 1.2.1", :group => :test
-gem "devise", ">= 2.1.0.rc"
 gem "bootstrap-sass", ">= 2.0.1"
 gem "simple_form"
 gem "will_paginate", ">= 3.0.3"
